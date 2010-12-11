@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Komodo Project File - DO NOT EDIT -->
+<project id="9d3e5bc3-774e-414d-90c3-829b32af4539" kpf_version="4" name="colortoggle.kpf">
+<livefolder id="9d3e5bc3-774e-414d-90c3-829b32af4539/background_toggle" idref="9d3e5bc3-774e-414d-90c3-829b32af4539" name="background_toggle" url="">
+</livefolder>
+<preference-set idref="9d3e5bc3-774e-414d-90c3-829b32af4539">
+  <string id="import_dirname">/home/nathan/.mozilla/firefox/6owbwlva.dev/extensions/background@toggle.wtf</string>
+  <string id="import_exclude_matches">*.*~;*.bak;*.tmp;CVS;.#*;*.pyo;*.pyc;.svn;*%*;tmp*.html;.DS_Store</string>
+  <string id="import_include_matches"></string>
+  <boolean id="import_live">1</boolean>
+  <boolean id="import_recursive">1</boolean>
+  <string id="import_type">useFolders</string>
+</preference-set>
+</project>

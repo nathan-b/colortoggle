@@ -1,0 +1,7 @@
+This extension was conceived of and written by me, Nathan Baker.
+
+"Goofy" at BabelZilla kindly provided initial localization support.
+
+Qing Lei provided the Chinese (zh-CN) localization.
+
+Jorge Villalobos provided the colorinput widget; code is available at (http://xulsolutions.blogspot.com/2006/07/simple-color-picker-input-on-xul.html).

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE overlay SYSTEM "chrome://backgroundtoggle/locale/backgroundtoggle.dtd" >
+<overlay id="bt-statusbar-widget" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	<script type="text/javascript" src="chrome://global/content/nsUserSettings.js" />
+	<script type="text/javascript" src="chrome://backgroundtoggle/content/statusbar.js" />
+
+	<statusbar id="status-bar">
+		<commandset id="bt-cs-msin">
+			<command id="bt-cmd-toggle" oncommand="addon9408.ctmain.btDoToggle();" />
+			<command id="bt-cmd-pref-open"
+							 oncommand="window.open('chrome://backgroundtoggle/content/options.xul', 'bt-options', 'chrome');" />
+		</commandset>
+
+		<keyset id="bt-ks-main">
+			<key id="bt-key-toggle" modifiers="control,shift" key="&key.default;" command="bt-cmd-toggle" />
+		</keyset>
+
+		<popupset>
+			<popup id="bt-menu" position="after_start">
+				<menuitem label="&menuitem.toggle.now;" default="true" commandset="csMain" command="bt-cmd-toggle" />
+				<menuseparator />
+				<menuitem label="&menuitem.preferences;" command="bt-cmd-pref-open" />
+			</popup>
+		</popupset>
+		<statusbarpanel id="bt-widget-of-DOOM"
+										label="CT"
+										position="10"
+										context="bt-menu"
+										onclick="if (event.button == 0) addon9408.ctmain.btDoToggle();" />
+		</statusbar>
+</overlay>

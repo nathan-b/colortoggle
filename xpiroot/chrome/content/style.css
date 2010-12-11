@@ -1,0 +1,3 @@
+colorinput {
+    -moz-binding: url('chrome://backgroundtoggle/content/newcolorpicker.xbl#color-input');
+}

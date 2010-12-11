@@ -1,0 +1,23 @@
+<!-- from options.xul -->
+<!ENTITY window.bt.settings "BT Settings">
+<!ENTITY caption.statusbar.settings "Statusbar settings">
+<!ENTITY label.key.for.color.toggle "Key for color toggle">
+<!ENTITY checkbox.ctrl "Ctrl">
+<!ENTITY checkbox.shift "Shift">
+<!ENTITY checkbox.alt "Alt">
+<!ENTITY label.statusbar.widget.text "Statusbar widget text">
+<!ENTITY checkbox.hide.statusbar.item "Hide statusbar item">
+<!ENTITY caption.scheme.1.current "Scheme 1 (current Firefox scheme)">
+<!ENTITY label.foreground.color "Foreground color:">
+<!ENTITY label.background.color "Background color:">
+<!ENTITY label.link "Link:">
+<!ENTITY label.visited.link "Visited link:">
+<!ENTITY checkbox.use.system.colors "Use system colors">
+<!ENTITY checkbox.let.pages.override "Let pages override these settings">
+<!ENTITY caption.scheme.2 "Scheme 2">
+<!ENTITY button.cancel "Cancel">
+<!ENTITY button.defaults "Restore defaults">
+<!-- from widget.xul -->
+<!ENTITY key.default "u">
+<!ENTITY menuitem.toggle.now "Toggle now">
+<!ENTITY menuitem.preferences "Preferences">

@@ -1,0 +1,23 @@
+<!-- from options.xul -->
+<!ENTITY window.bt.settings "BT 设置">
+<!ENTITY caption.statusbar.settings "状态栏设置">
+<!ENTITY label.key.for.color.toggle "颜色切换的快捷键">
+<!ENTITY checkbox.ctrl "Ctrl">
+<!ENTITY checkbox.shift "Shift">
+<!ENTITY checkbox.alt "Alt">
+<!ENTITY label.statusbar.widget.text "状态栏按钮文本">
+<!ENTITY checkbox.hide.statusbar.item "隐藏状态栏按钮">
+<!ENTITY caption.scheme.1.current "配置 1 (Firefox 当前配置)">
+<!ENTITY label.foreground.color "前景色:">
+<!ENTITY label.background.color "背景色:">
+<!ENTITY label.link "链接:">
+<!ENTITY label.visited.link "已访问的链接:">
+<!ENTITY checkbox.use.system.colors "使用系统颜色">
+<!ENTITY checkbox.let.pages.override "允许页面覆盖这些设置">
+<!ENTITY caption.scheme.2 "配置 2">
+<!ENTITY button.cancel "取消">
+<!ENTITY button.defaults "恢复默认值">
+<!-- from widget.xul -->
+<!ENTITY key.default "u">
+<!ENTITY menuitem.toggle.now "马上切换">
+<!ENTITY menuitem.preferences "选项">
