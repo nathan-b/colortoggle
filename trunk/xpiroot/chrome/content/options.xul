@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://backgroundtoggle/content/style.css" type="text/css"?>
+
+<!DOCTYPE window SYSTEM "chrome://backgroundtoggle/locale/backgroundtoggle.dtd" >
+<window id="btsettingswin"
+				title="&window.bt.settings;"
+				xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+				onload="addon9408.ctopts.DoMeUp(false)">
+<script type="text/javascript" src="chrome://global/content/nsUserSettings.js" />
+<script type="text/javascript" src="chrome://backgroundtoggle/content/options.js" />
+
+
+<groupbox>
+	<caption label="&caption.statusbar.settings;" />
+	<!--<hbox align="center">
+		<label value="Statusbar widget position"/>
+		<textbox id="bt-sb-pos" width="40px" type="number" min="1" max="20"/>
+	</hbox>-->
+
+	<hbox align="center">
+		<label value="&label.key.for.color.toggle;" />
+		<textbox id="bt-ct-key" width="30px" maxlength="1" />
+		<checkbox id="bt-key-ctrl" label="&checkbox.ctrl;" checked="false" />
+		<checkbox id="bt-key-shift" label="&checkbox.shift;" checked="false" />
+		<checkbox id="bt-key-alt" label="&checkbox.alt;" checked="false" />
+	</hbox>
+	<hbox align="center">
+		<label value="&label.statusbar.widget.text;" />
+		<textbox id="bt-sb-text" />
+	</hbox>
+	<hbox align="center">
+		<checkbox id="bt-hide-ui" label="&checkbox.hide.statusbar.item;" checked="false" />
+	</hbox>
+
+</groupbox>
+
+<groupbox>
+	<caption label="&caption.scheme.1.current;" />
+	<hbox align="center">
+		<label value="&label.foreground.color;" />
+		<spacer flex="2" />
+		<colorinput id="cp1-fg" type="button" />
+	</hbox>
+	<hbox align="center">
+		<label value="&label.background.color;" />
+		<spacer flex="2" />
+		<colorinput id="cp1-bg" type="button" />
+	</hbox>
+	<hbox align="center">
+		<label value="&label.link;" />
+		<spacer flex="2" />
+		<colorinput id="cp1-ln" type="button" />
+	</hbox>
+	<hbox align="center">
+		<label value="&label.visited.link;" />
+		<spacer flex="2" />
+		<colorinput id="cp1-vl" type="button" />
+	</hbox>
+	<checkbox id="cp1-sc" label="&checkbox.use.system.colors;" checked="true" />
+	<checkbox id="cp1-wp" label="&checkbox.let.pages.override;" checked="true" />
+</groupbox>
+
+<groupbox>
+	<caption label="&caption.scheme.2;" />
+	<hbox align="center">
+		<label value="&label.foreground.color;" />
+		<spacer flex="2" />
+		<colorinput id="cp2-fg" type="button" />
+	</hbox>
+	<hbox align="center">
+		<label value="&label.background.color;" />
+		<spacer flex="2" />
+		<colorinput id="cp2-bg" type="button" />
+	</hbox>
+	<hbox align="center">
+		<label value="&label.link;" />
+		<spacer flex="2" />
+		<colorinput id="cp2-ln" type="button" />
+	</hbox>
+	<hbox align="center">
+		<label value="&label.visited.link;" />
+		<spacer flex="2" />
+		<colorinput id="cp2-vl" type="button" />
+	</hbox>
+	<checkbox id="cp2-sc" label="&checkbox.use.system.colors;" checked="false" />
+	<checkbox id="cp2-wp" label="&checkbox.let.pages.override;" checked="false" />
+</groupbox>
+
+
+<hbox>
+	<button id="btOK" label="OK" oncommand="addon9408.ctopts.SaveMeUp(); window.close();" />
+	<button id="btCancel" label="&button.cancel;" oncommand="window.close();" />
+	<button id="btDefaults" label="&button.defaults;" oncommand="addon9408.ctopts.DoMeUp(true);" />
+</hbox>
+
+</window>
