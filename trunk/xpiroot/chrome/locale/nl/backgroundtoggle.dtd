@@ -1,0 +1,23 @@
+<!-- from options.xul -->
+<!ENTITY window.bt.settings "Kleur Instellingen">
+<!ENTITY caption.statusbar.settings "Statusbalk instellingen">
+<!ENTITY label.key.for.color.toggle "Sneltoets om kleur te wisselen">
+<!ENTITY checkbox.ctrl "Ctrl">
+<!ENTITY checkbox.shift "Shift">
+<!ENTITY checkbox.alt "Alt">
+<!ENTITY label.statusbar.widget.text "Tekst in de statusbalk">
+<!ENTITY checkbox.hide.statusbar.item "Verberg statusbalk tekst">
+<!ENTITY caption.scheme.1.current "Schema 1 (huidige Firefox thema)">
+<!ENTITY label.foreground.color "Voorgrond kleur:">
+<!ENTITY label.background.color "Achtergrond kleur:">
+<!ENTITY label.link "Link:">
+<!ENTITY label.visited.link "Bezochte link:">
+<!ENTITY checkbox.use.system.colors "Gebruik systeemkleuren">
+<!ENTITY checkbox.let.pages.override "Laat pagina's deze instellingen overschrijven">
+<!ENTITY caption.scheme.2 "Schema 2">
+<!ENTITY button.cancel "Annuleren">
+<!ENTITY button.defaults "Herstel standaardinstellingen">
+<!-- from widget.xul -->
+<!ENTITY key.default "u">
+<!ENTITY menuitem.toggle.now "Toggle nu">
+<!ENTITY menuitem.preferences "Instellingen">

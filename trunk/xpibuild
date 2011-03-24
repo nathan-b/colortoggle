@@ -1,4 +1,4 @@
-svn export . ~/tmp/ct
+svn export --force . ~/tmp/ct
 cd ~/tmp/ct/xpiroot
 zip -r ../colorswitch.xpi *
 cd -
