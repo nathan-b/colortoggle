@@ -5,7 +5,7 @@
 
 	<Description about="urn:mozilla:install-manifest">
 		<em:id>background@toggle.wtf</em:id>
-		<em:version>0.12</em:version>
+		<em:version>0.12.2</em:version>
 		<em:type>2</em:type>
 
 		<!-- Target Application this extension can install into,

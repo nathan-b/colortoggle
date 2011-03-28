@@ -1,4 +1,5 @@
 content     backgroundtoggle    chrome/content/
 locale    backgroundtoggle   en  chrome/locale/en/
 locale    backgroundtoggle   zh-CN  chrome/locale/zh-CN/
+locale    backgroundtoggle   nl  chrome/locale/nl/
 overlay chrome://browser/content/browser.xul chrome://backgroundtoggle/content/statusbar_widget.xul
