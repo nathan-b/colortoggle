@@ -1,0 +1,6 @@
+#!/bin/sh
+
+./xpibuild
+
+cp colorswitch.xpi ~/.mozilla/firefox/6owbwlva.dev/extensions/background\@toggle.wtf.xpi
+
