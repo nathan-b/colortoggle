@@ -17,11 +17,11 @@
 		</keyset>
 
 		<popupset>
-			<popup id="bt-menu" position="after_start">
+			<menupopup id="bt-menu" position="after_start">
 				<menuitem label="&menuitem.toggle.now;" default="true" commandset="csMain" command="bt-cmd-toggle" />
 				<menuseparator />
 				<menuitem label="&menuitem.preferences;" command="bt-cmd-pref-open" />
-			</popup>
+			</menupopup>
 		</popupset>
 		<statusbarpanel id="bt-widget-of-DOOM"
 										label="CT"
