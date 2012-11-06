@@ -1,11 +1,11 @@
 <!-- from options.xul -->
-<!ENTITY window.bt.settings "BT Settings">
+<!ENTITY window.bt.settings "ColorToggle Settings">
 <!ENTITY caption.statusbar.settings "Statusbar settings">
 <!ENTITY label.key.for.color.toggle "Key for color toggle">
 <!ENTITY checkbox.ctrl "Ctrl">
 <!ENTITY checkbox.shift "Shift">
 <!ENTITY checkbox.alt "Alt">
-<!ENTITY label.statusbar.widget.text "Statusbar widget text">
+<!ENTITY label.statusbar.widget.text "Statusbar and toolbar button text">
 <!ENTITY checkbox.hide.statusbar.item "Hide statusbar item">
 <!ENTITY caption.scheme.1.current "Scheme 1 (current Firefox scheme)">
 <!ENTITY label.foreground.color "Foreground color:">
@@ -21,3 +21,5 @@
 <!ENTITY key.default "u">
 <!ENTITY menuitem.toggle.now "Toggle now">
 <!ENTITY menuitem.preferences "Preferences">
+<!-- from toggle_button.xul -->
+<!ENTITY togglebutton.tooltip "Toggle page colors now">

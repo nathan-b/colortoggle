@@ -1,5 +1,5 @@
 <!-- from options.xul -->
-<!ENTITY window.bt.settings "BT 设置">
+<!ENTITY window.bt.settings "ColorToggle 设置">
 <!ENTITY caption.statusbar.settings "状态栏设置">
 <!ENTITY label.key.for.color.toggle "颜色切换的快捷键">
 <!ENTITY checkbox.ctrl "Ctrl">
@@ -21,3 +21,5 @@
 <!ENTITY key.default "u">
 <!ENTITY menuitem.toggle.now "马上切换">
 <!ENTITY menuitem.preferences "选项">
+<!-- from toggle_button.xul -->
+<!ENTITY togglebutton.tooltip "马上切换">

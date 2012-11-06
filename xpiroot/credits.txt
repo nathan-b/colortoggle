@@ -4,4 +4,6 @@ This extension was conceived of and written by me, Nathan Baker.
 
 Qing Lei provided the Chinese (zh-CN) localization.
 
+Jikke van Ewijk provided the Dutch (nl) localization.
+
 Jorge Villalobos provided the colorinput widget; code is available at (http://xulsolutions.blogspot.com/2006/07/simple-color-picker-input-on-xul.html).

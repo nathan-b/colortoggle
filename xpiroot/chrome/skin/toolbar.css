@@ -1,0 +1,7 @@
+#bt-toggle-button {
+  list-style-image: url("chrome://backgroundtoggle/skin/24x24.png");
+}
+
+toolbar[iconsize="small"] #bt-toggle-button {
+  list-style-image: url("chrome://backgroundtoggle/skin/16x16.png");
+}

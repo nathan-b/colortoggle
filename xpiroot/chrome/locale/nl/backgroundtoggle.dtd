@@ -21,3 +21,5 @@
 <!ENTITY key.default "u">
 <!ENTITY menuitem.toggle.now "Toggle nu">
 <!ENTITY menuitem.preferences "Instellingen">
+<!-- from toggle_button.xul -->
+<!ENTITY togglebutton.tooltip "Toggle nu">

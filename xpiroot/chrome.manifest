@@ -2,4 +2,7 @@ content     backgroundtoggle    chrome/content/
 locale    backgroundtoggle   en  chrome/locale/en/
 locale    backgroundtoggle   zh-CN  chrome/locale/zh-CN/
 locale    backgroundtoggle   nl  chrome/locale/nl/
+style   chrome://global/content/customizeToolbar.xul chrome://backgroundtoggle/skin/toolbar.css
+skin backgroundtoggle classic/1.0 chrome/skin/
 overlay chrome://browser/content/browser.xul chrome://backgroundtoggle/content/statusbar_widget.xul
+overlay chrome://browser/content/browser.xul chrome://backgroundtoggle/content/toggle_button.xul
