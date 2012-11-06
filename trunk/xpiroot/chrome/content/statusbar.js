@@ -49,11 +49,19 @@ addon9408.ctmain =
 		var widget = document.getElementById('bt-widget-of-DOOM');
 		if (!widget) {
 			conlog.logStringMessage('bgtoggle: Could not get statusbar widget');
-			return;
+		} else {
+			widget.label = nsPreferences.copyUnicharPref('extensions.bgtoggle.widget_text', 'CT');
+			widget.position = nsPreferences.getIntPref('extensions.bgtoggle.widget_pos', 10);
+			widget.hidden = nsPreferences.getBoolPref('extensions.bgtoggle.hide_statusbar_widget', false);
 		}
-		widget.label = nsPreferences.copyUnicharPref('extensions.bgtoggle.widget_text', 'CT');
-		widget.position = nsPreferences.getIntPref('extensions.bgtoggle.widget_pos', 10);
-		widget.hidden = nsPreferences.getBoolPref('extensions.bgtoggle.hide_statusbar_widget', false);
+
+		var button = document.getElementById('bt-toggle-button');
+		if (!button) {
+			conlog.logStringMessage('bgtoggle: Could not get toolbar button');
+		} else {
+			button.label = nsPreferences.copyUnicharPref('extensions.bgtoggle.widget_text', 'CT');
+		}
+
 		this.btSetKey();
 	},
 
