@@ -1,20 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://backgroundtoggle/skin/toolbar.css" type="text/css"?>
 
 <!DOCTYPE overlay SYSTEM "chrome://backgroundtoggle/locale/backgroundtoggle.dtd" >
-<overlay id="bt-statusbar-widget" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<overlay id="bt-colortoggle" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 	<script type="text/javascript" src="chrome://global/content/nsUserSettings.js" />
-	<script type="text/javascript" src="chrome://backgroundtoggle/content/statusbar.js" />
+	<script type="text/javascript" src="chrome://backgroundtoggle/content/colortoggle.js" />
 
-	<statusbar id="status-bar">
+	<window id="main-window">
+		<keyset id="bt-ks-main">
+			<key id="bt-key-toggle" modifiers="control,shift" key="&key.default;" command="bt-cmd-toggle" />
+		</keyset>
 		<commandset id="bt-cs-msin">
 			<command id="bt-cmd-toggle" oncommand="addon9408.ctmain.btDoToggle();" />
 			<command id="bt-cmd-pref-open"
 							 oncommand="window.open('chrome://backgroundtoggle/content/options.xul', 'bt-options', 'chrome');" />
 		</commandset>
+	</window>
 
-		<keyset id="bt-ks-main">
-			<key id="bt-key-toggle" modifiers="control,shift" key="&key.default;" command="bt-cmd-toggle" />
-		</keyset>
+	<toolbarpalette id="BrowserToolbarPalette">
+		<toolbarbutton id="bt-toggle-button"
+									 class="toolbarbutton-1"
+									 label="CT"
+									 tooltiptext="&togglebutton.tooltip;"
+									 oncommand="addon9408.ctmain.btDoToggle();"/>
+	</toolbarpalette>
+
+	<statusbar id="status-bar">
 
 		<popupset>
 			<menupopup id="bt-menu" position="after_start">
@@ -28,5 +39,5 @@
 										position="10"
 										context="bt-menu"
 										onclick="if (event.button == 0) addon9408.ctmain.btDoToggle();" />
-		</statusbar>
+	</statusbar>
 </overlay>
