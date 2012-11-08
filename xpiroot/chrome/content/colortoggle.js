@@ -46,6 +46,9 @@ addon9408.ctmain =
 	},
 
 	btOnStartup: function() {
+		var conlog = Components.classes['@mozilla.org/consoleservice;1']
+									.getService(Components.interfaces.nsIConsoleService);
+		conlog.logStringMessage('bgtoggle: Executing onStartup');
 		var widget = document.getElementById('bt-widget-of-DOOM');
 		if (!widget) {
 			conlog.logStringMessage('bgtoggle: Could not get statusbar widget');
@@ -119,6 +122,8 @@ addon9408.ctmain =
 
 		keyset = document.createElement('keyset');
 		keyset.id = 'bt-ks-main';
+
+		conlog.logStringMessage('bgtoggle: Adding key ' + key + ', ' + modstr);
 
 		keyelem = document.createElement('key');
 		keyelem.setAttribute('id', 'bt-key-toggle');
