@@ -4,6 +4,12 @@ if (!addon9408) {
 }
 addon9408.ctmain =
 {
+	btWriteLog: function(str) {
+		var conlog = Components.classes['@mozilla.org/consoleservice;1']
+									.getService(Components.interfaces.nsIConsoleService);
+		conlog.logStringMessage(str);
+	},
+
 	btDoToggle: function() {
 		var current = new Object();
 		var custom = new Object();
@@ -14,7 +20,7 @@ addon9408.ctmain =
 		current.ln = nsPreferences.copyUnicharPref('browser.anchor_color', '');
 		current.vl = nsPreferences.copyUnicharPref('browser.visited_color', '');
 		current.sc = nsPreferences.getBoolPref('browser.display.use_system_colors');
-		current.wp = nsPreferences.getBoolPref('browser.display.use_document_colors');
+		current.wp = nsPreferences.getIntPref('browser.display.document_color_use');
 
 		//Get the custom colors
 		custom.fg = nsPreferences.copyUnicharPref('extensions.bgtoggle.foreground_color', '#ffffff');
@@ -22,7 +28,7 @@ addon9408.ctmain =
 		custom.ln = nsPreferences.copyUnicharPref('extensions.bgtoggle.anchor_color', '#66cccc');
 		custom.vl = nsPreferences.copyUnicharPref('extensions.bgtoggle.visited_color', '#c0c0c0');
 		custom.sc = nsPreferences.getBoolPref('extensions.bgtoggle.use_system_colors', false);
-		custom.wp = nsPreferences.getBoolPref('extensions.bgtoggle.use_document_colors', false);
+		custom.wp = nsPreferences.getIntPref('extensions.bgtoggle.document_color_use', 2);
 
 		//Save the custom colors to the current colors
 		nsPreferences.setUnicharPref('browser.display.foreground_color', custom.fg);
@@ -30,7 +36,7 @@ addon9408.ctmain =
 		nsPreferences.setUnicharPref('browser.anchor_color', custom.ln);
 		nsPreferences.setUnicharPref('browser.visited_color', custom.vl);
 		nsPreferences.setBoolPref('browser.display.use_system_colors', custom.sc);
-		nsPreferences.setBoolPref('browser.display.use_document_colors', custom.wp);
+		nsPreferences.setIntPref('browser.display.document_color_use', custom.wp);
 
 		//Save the previously current colors as the new custom colors
 		nsPreferences.setUnicharPref('extensions.bgtoggle.foreground_color', current.fg);
@@ -38,7 +44,7 @@ addon9408.ctmain =
 		nsPreferences.setUnicharPref('extensions.bgtoggle.anchor_color', current.ln);
 		nsPreferences.setUnicharPref('extensions.bgtoggle.visited_color', current.vl);
 		nsPreferences.setBoolPref('extensions.bgtoggle.use_system_colors', current.sc);
-		nsPreferences.setBoolPref('extensions.bgtoggle.use_document_colors', current.wp);
+		nsPreferences.setIntPref('extensions.bgtoggle.document_color_use', current.wp);
 
 		//Apply it
 		var prefService = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService);
@@ -46,12 +52,10 @@ addon9408.ctmain =
 	},
 
 	btOnStartup: function() {
-		var conlog = Components.classes['@mozilla.org/consoleservice;1']
-									.getService(Components.interfaces.nsIConsoleService);
-		conlog.logStringMessage('bgtoggle: Executing onStartup');
+		btWriteLog('bgtoggle: Executing onStartup');
 		var widget = document.getElementById('bt-widget-of-DOOM');
 		if (!widget) {
-			conlog.logStringMessage('bgtoggle: Could not get statusbar widget');
+			btWriteLog('bgtoggle: Could not get statusbar widget');
 		} else {
 			widget.label = nsPreferences.copyUnicharPref('extensions.bgtoggle.widget_text', 'CT');
 			widget.position = nsPreferences.getIntPref('extensions.bgtoggle.widget_pos', 10);
@@ -60,7 +64,7 @@ addon9408.ctmain =
 
 		var button = document.getElementById('bt-toggle-button');
 		if (!button) {
-			conlog.logStringMessage('bgtoggle: Could not get toolbar button');
+			btWriteLog('bgtoggle: Could not get toolbar button');
 		} else {
 			button.label = nsPreferences.copyUnicharPref('extensions.bgtoggle.widget_text', 'CT');
 		}
@@ -74,8 +78,6 @@ addon9408.ctmain =
 	 * well, but if so it's not extremely discoverable.
 	 */
 	btSetKey: function() {
-		var conlog = Components.classes['@mozilla.org/consoleservice;1']
-									.getService(Components.interfaces.nsIConsoleService);
 		var keyset = document.getElementById('bt-ks-main');
 		var ksparent;
 		var keyelem;
@@ -98,17 +100,17 @@ addon9408.ctmain =
 		modstr = modstr.join(',');
 
 		if (!keyset) {
-			conlog.logStringMessage('bgtoggle: Could not get keyset element');
+			btWriteLog('bgtoggle: Could not get keyset element');
 			return;
 		}
 		ksparent = keyset.parentNode;
 		if (!ksparent) {
-			conlog.logStringMessage('bgtoggle: Keyset has no parent');
+			btWriteLog('bgtoggle: Keyset has no parent');
 			return;
 		}
 
 		if (key.length > 1) {
-			conlog.logStringMessage('bgtoggle: Key length > 1');
+			btWriteLog('bgtoggle: Key length > 1');
 			return;
 		}
 
@@ -123,7 +125,7 @@ addon9408.ctmain =
 		keyset = document.createElement('keyset');
 		keyset.id = 'bt-ks-main';
 
-		conlog.logStringMessage('bgtoggle: Adding key ' + key + ', ' + modstr);
+		btWriteLog('bgtoggle: Adding key ' + key + ', ' + modstr);
 
 		keyelem = document.createElement('key');
 		keyelem.setAttribute('id', 'bt-key-toggle');
@@ -157,11 +159,9 @@ addon9408.ctmain =
 
 		observe: function(branch, event, name)
 		{
-			var conlog = Components.classes['@mozilla.org/consoleservice;1']
-											.getService(Components.interfaces.nsIConsoleService);
 			var widget = document.getElementById('bt-widget-of-DOOM');
 			if (!widget) {
-				conlog.logStringMessage('bgtoggle: Could not get statusbar widget');
+				btWriteLog('bgtoggle: Could not get statusbar widget');
 				return;
 			}
 

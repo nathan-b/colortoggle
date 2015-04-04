@@ -1,7 +1,7 @@
-svn export --force . ~/tmp/ct
-cd ~/tmp/ct/xpiroot
+svn export --force . /tmp/ct
+pushd /tmp/ct/xpiroot
 zip -r ../colorswitch.xpi *
-cd -
-cp ~/tmp/ct/colorswitch.xpi .
-rm -rf ~/tmp/ct
+popd
+cp /tmp/ct/colorswitch.xpi .
+rm -rf /tmp/ct
 

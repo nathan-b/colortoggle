@@ -13,11 +13,6 @@
 
 <groupbox>
 	<caption label="&caption.statusbar.settings;" />
-	<!--<hbox align="center">
-		<label value="Statusbar widget position"/>
-		<textbox id="bt-sb-pos" width="40px" type="number" min="1" max="20"/>
-	</hbox>-->
-
 	<hbox align="center">
 		<label value="&label.key.for.color.toggle;" />
 		<textbox id="bt-ct-key" width="30px" maxlength="1" />
@@ -57,8 +52,19 @@
 		<spacer flex="2" />
 		<colorinput id="cp1-vl" type="button" />
 	</hbox>
-	<checkbox id="cp1-sc" label="&checkbox.use.system.colors;" checked="true" />
-	<checkbox id="cp1-wp" label="&checkbox.let.pages.override;" checked="true" />
+	<hbox align="center">
+		<vbox>
+			<label value="&checkbox.let.pages.override;" />
+			<menulist label="&checkbox.let.pages.override;" id="cp1-wp">
+				<menupopup>
+					<menuitem label="Never" value="2"/>
+					<menuitem label="Only with High Contrast themes" value="0"/>
+					<menuitem label="Always" value="1"/>
+				</menupopup>
+			</menulist>
+		</vbox>
+		<checkbox id="cp1-sc" label="&checkbox.use.system.colors;" checked="true" />
+	</hbox>
 </groupbox>
 
 <groupbox>
@@ -83,8 +89,19 @@
 		<spacer flex="2" />
 		<colorinput id="cp2-vl" type="button" />
 	</hbox>
-	<checkbox id="cp2-sc" label="&checkbox.use.system.colors;" checked="false" />
-	<checkbox id="cp2-wp" label="&checkbox.let.pages.override;" checked="false" />
+		<hbox align="center">
+			<vbox>
+				<label value="&checkbox.let.pages.override;" />
+				<menulist label="&checkbox.let.pages.override;" id="cp2-wp">
+					<menupopup>
+						<menuitem label="Never" value="2"/>
+						<menuitem label="Only with High Contrast themes" value="0"/>
+						<menuitem label="Always" value="1"/>
+					</menupopup>
+				</menulist>
+			</vbox>
+			<checkbox id="cp2-sc" label="&checkbox.use.system.colors;" checked="false" />
+		</hbox>
 </groupbox>
 
 

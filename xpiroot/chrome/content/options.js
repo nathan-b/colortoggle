@@ -140,7 +140,7 @@ addon9408.ctopts = {
 		addon9408.ctopts.GetColorPref('cp1-ln', 'browser.anchor_color', '#66cccc', false);
 		addon9408.ctopts.GetColorPref('cp1-vl', 'browser.visited_color', '#cc6666', false);
 		addon9408.ctopts.GetCheckPref('cp1-sc', 'browser.display.use_system_colors', true, defaults);
-		addon9408.ctopts.GetCheckPref('cp1-wp', 'browser.display.use_document_colors', true, defaults);
+		addon9408.ctopts.GetNumericPref('cp1-wp', 'browser.display.document_color_use', 0, defaults);
 
 		//Get the user's stored prefs for Scheme 2
 		addon9408.ctopts.GetColorPref('cp2-fg', 'extensions.bgtoggle.foreground_color', '#ffffff', defaults);
@@ -148,7 +148,7 @@ addon9408.ctopts = {
 		addon9408.ctopts.GetColorPref('cp2-ln', 'extensions.bgtoggle.anchor_color', '#66cccc', defaults);
 		addon9408.ctopts.GetColorPref('cp2-vl', 'extensions.bgtoggle.visited_color', '#c0c0c0', defaults);
 		addon9408.ctopts.GetCheckPref('cp2-sc', 'extensions.bgtoggle.use_system_colors', false, defaults);
-		addon9408.ctopts.GetCheckPref('cp2-wp', 'extensions.bgtoggle.use_document_colors', false, defaults);
+		addon9408.ctopts.GetNumericPref('cp2-wp', 'extensions.bgtoggle.document_color_use', 2, defaults);
 
 		//Get prefs for statusbar widget
 		addon9408.ctopts.GetKeyPref('bt-ct-key',
@@ -168,13 +168,13 @@ addon9408.ctopts = {
 		addon9408.ctopts.SaveColorPref('cp1-ln', 'browser.anchor_color');
 		addon9408.ctopts.SaveColorPref('cp1-vl', 'browser.visited_color');
 		addon9408.ctopts.SaveCheckPref('cp1-sc', 'browser.display.use_system_colors');
-		addon9408.ctopts.SaveCheckPref('cp1-wp', 'browser.display.use_document_colors');
+		addon9408.ctopts.SaveNumericPref('cp1-wp', 'browser.display.document_color_use');
 		addon9408.ctopts.SaveColorPref('cp2-fg', 'extensions.bgtoggle.foreground_color');
 		addon9408.ctopts.SaveColorPref('cp2-bg', 'extensions.bgtoggle.background_color');
 		addon9408.ctopts.SaveColorPref('cp2-ln', 'extensions.bgtoggle.anchor_color');
 		addon9408.ctopts.SaveColorPref('cp2-vl', 'extensions.bgtoggle.visited_color');
 		addon9408.ctopts.SaveCheckPref('cp2-sc', 'extensions.bgtoggle.use_system_colors');
-		addon9408.ctopts.SaveCheckPref('cp2-wp', 'extensions.bgtoggle.use_document_colors');
+		addon9408.ctopts.SaveNumericPref('cp2-wp', 'extensions.bgtoggle.document_color_use');
 
 		addon9408.ctopts.SaveKeyPref('bt-ct-key', 'bt-key-ctrl', 'bt-key-shift', 'bt-key-alt', 'extensions.bgtoggle.key_combo');
 		addon9408.ctopts.SaveStringPref('bt-sb-text', 'extensions.bgtoggle.widget_text');
